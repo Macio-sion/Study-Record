@@ -13,3 +13,9 @@ logs/
 # IDE
 .idea/
 .vscode/
+
+# jupyter
+*.ipynb_checkpoints
+
+# model
+*.pt
