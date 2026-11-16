@@ -1,0 +1,37 @@
+llm:
+  provider: ollama
+  ollama:
+    base_url: http://127.0.0.1:11434
+    model: qwen2.5:7b-instruct-q4_K_M
+    lightweight_model: qwen3.5:0.8b
+    idle_timeout: 30
+    temperature: 0.1
+ui:
+  font_size: 14
+  window_width: 1000
+  window_height: 700
+  remember_position: true
+  start_minimized: false
+tools:
+  confirm_dangerous_ops: true
+  command_timeout: 10
+  max_history_rounds: 10
+knowledge:
+  embedding_model: qwen3-embedding
+  vector_dim: 4096
+  chunk_size: 1024
+  chunk_min_size: 256
+  chunk_overlap: 256
+  knowledge_dir: knowledge
+  collection_prefix: rag_knowledge
+security:
+  blocked_commands:
+  - format
+  - del /f /s
+  - rm -rf /
+  - 'rd /s /q C:'
+  - shutdown /s
+  - shutdown /r
+  - diskpart
+  - bcdedit
+  audit_log_enabled: true
